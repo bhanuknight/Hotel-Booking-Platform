@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<style>
+		body{
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: fit-content; margin: 0 auto;">
+		<h1>Hotel Booking</h1>
+		<form>
+		  Username:<br>
+		  <input type="text" name="username" id="user"><br>
+		  Password:<br>
+		  <input type="password" name="password">
+		  <br><br>
+		  <button onclick="storeUser()" type="button">Sign in</button>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		function storeUser(){
+			var username = document.getElementById("user");
+			sessionStorage.setItem("user", username.value);
+			window.location.href="main.html";
+		}
+	</script>
+</body>
+</html>
